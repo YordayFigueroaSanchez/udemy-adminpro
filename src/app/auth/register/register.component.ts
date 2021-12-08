@@ -42,7 +42,9 @@ export class RegisterComponent {
   }
 
   aceptaTerminos():boolean {
-    if (this.registerForm.get('terminos') && this.formSubnitted) {
+    return !this.registerForm.get('terminos').value && this.formSubnitted
+  }
+
   contrasennaNoValidas():boolean{
     const pass1 = this.registerForm.get('password').value;
     const pass2 = this.registerForm.get('password2').value;
