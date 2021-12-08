@@ -14,7 +14,7 @@ export class RegisterComponent {
     nombre : ['Yadroy', Validators.required],
     email : ['yfsancheztest100@gmail.com', [Validators.required, Validators.email]],
     password : ['123456', Validators.required],
-    password2 : ['123456', Validators.required],
+    password2 : ['1234567', Validators.required],
     terminos : [false, Validators.required],
   });
   constructor(private fb: FormBuilder) { }
@@ -43,9 +43,13 @@ export class RegisterComponent {
 
   aceptaTerminos():boolean {
     if (this.registerForm.get('terminos') && this.formSubnitted) {
+  contrasennaNoValidas():boolean{
+    const pass1 = this.registerForm.get('password').value;
+    const pass2 = this.registerForm.get('password2').value;
+    if ((pass1 !== pass2) && this.formSubnitted) {
       return true;
     } else {
-      return false
+      return false;
     }
   }
 
