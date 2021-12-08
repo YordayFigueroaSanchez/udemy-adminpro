@@ -8,6 +8,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterComponent {
 
+  public formSubnitted = false;
+
   public registerForm = this.fb.group({
     nombre : ['Yadroy', Validators.required],
     email : ['yfsancheztest100@gmail.com', Validators.required],
@@ -20,7 +22,15 @@ export class RegisterComponent {
   
   crearUsuario(){
     console.log(this.registerForm.value);
-    
+    this.formSubnitted = true;  
+  }
+
+  campoNoValido(campo : string):boolean {
+    if (this.registerForm.get(campo).invalid && this.formSubnitted) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
