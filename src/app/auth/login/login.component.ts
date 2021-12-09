@@ -52,7 +52,6 @@ export class LoginComponent implements OnInit{
         Swal.fire('Error',err.error.msg);
       });
 
-    //this.router.navigateByUrl('/');
   }
 
   renderButton() {
@@ -82,8 +81,7 @@ export class LoginComponent implements OnInit{
     console.log(element.id);
     this.auth2.attachClickHandler(element, {},
         (googleUser) => {
-          // document.getElementById('name').innerText = "Signed in: " +
-          //     googleUser.getBasicProfile().getName();
+          
           var id_token = googleUser.getAuthResponse().id_token;
           console.log(id_token);
           this.usuarioService.loginGoogle(id_token).subscribe(  resp => {

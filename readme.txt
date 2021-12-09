@@ -27,3 +27,4 @@
 176 logout
     borrar el LocalStorage
     login con google
+    ngZone para procesos externos
