@@ -39,7 +39,7 @@ export class RegisterComponent {
         console.log("usuario creado");
         console.log(resp);
         
-      },(err) => console.warn(err));
+      },(err) => console.warn(err.error.msg));
   }
 
   campoNoValido(campo : string):boolean {
