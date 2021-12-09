@@ -47,4 +47,14 @@ export class UsuarioService {
             })
           )
   }
+
+  validarToken(){
+    const token = localStorage.getItem('token') || '';
+    return this.http.get(`${ base_url }/login/renew`, { 
+      headers: {
+        'x-token': token
+      }
+     } )
+
+  }
 }
