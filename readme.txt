@@ -23,3 +23,7 @@
 175 proteger rutas de mi aplicacion
     crear guard para proteger rutas
     ng g guard guards/auth --skipTests
+
+176 logout
+    borrar el LocalStorage
+    login con google

@@ -6,6 +6,7 @@ import { RegisterForm } from '../interfaces/register_form.interfaces';
 import { LoginForm } from '../interfaces/login_form.interfaces';
 import { environment } from 'src/environments/environment';
 import { Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 const base_url = environment.base_url;
 
@@ -15,7 +16,8 @@ const base_url = environment.base_url;
 export class UsuarioService {
 
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient,
+                private router: Router) { }
 
   crearUsuario (formData: RegisterForm){
     
@@ -64,5 +66,10 @@ export class UsuarioService {
        
      )
 
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigateByUrl('/login');
   }
 }
