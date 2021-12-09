@@ -12,3 +12,8 @@
 
 172 documentacion de google singin api
     https://developers.google.com/identity/sign-in/web/sign-in
+
+173 obtener el token de una autenticacion google singin
+    agregar boton de google y hacer uso de la api
+    boton centrado
+    
