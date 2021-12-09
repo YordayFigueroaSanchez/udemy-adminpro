@@ -14,8 +14,8 @@ export class RegisterComponent {
     nombre : ['Yadroy', Validators.required],
     email : ['yfsancheztest100@gmail.com', [Validators.required, Validators.email]],
     password : ['123456', Validators.required],
-    password2 : ['1234567', Validators.required],
-    terminos : [false, Validators.required],
+    password2 : ['123456', Validators.required],
+    terminos : [true, Validators.required],
   },{
     validators: this.passwordsIquals('password', 'password2')
   });
