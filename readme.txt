@@ -7,3 +7,8 @@
 
 170 guardar informacion en el LocalStorage
     importar tap de rxjs/operators
+
+171 funcion del recuerdame
+
+172 documentacion de google singin api
+    https://developers.google.com/identity/sign-in/web/sign-in
