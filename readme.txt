@@ -19,3 +19,7 @@
 
 174 usar el token de google para autenticarnos
     refactorizar guia de google para typescript 
+
+175 proteger rutas de mi aplicacion
+    crear guard para proteger rutas
+    ng g guard guards/auth --skipTests
