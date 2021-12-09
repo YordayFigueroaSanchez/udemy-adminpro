@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -20,7 +20,8 @@ export class UsuarioService {
   public auth2: any;
 
   constructor( private http: HttpClient,
-                private router: Router) { 
+                private router: Router,
+                private ngZone:NgZone) { 
                   this.googleInit();
                 }
 
@@ -77,8 +78,12 @@ export class UsuarioService {
     localStorage.removeItem('token');
     
     this.auth2.signOut().then( () => {
-      this.router.navigateByUrl('/login');
-      // console.log('User signed out.');
+      this.ngZone.run(() => {
+        
+        this.router.navigateByUrl('/login');
+        // console.log('User signed out.');
+        
+      });
     });
 
 
