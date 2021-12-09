@@ -34,7 +34,12 @@ export class RegisterComponent {
       return;
       
     }
-    this.usuarioService.crearUsuario(this.registerForm.value);
+    this.usuarioService.crearUsuario(this.registerForm.value)
+      .subscribe( resp => {
+        console.log("usuario creado");
+        console.log(resp);
+        
+      },(err) => console.warn(err));
   }
 
   campoNoValido(campo : string):boolean {
