@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +16,10 @@ export class RegisterComponent {
     password : ['123456', Validators.required],
     password2 : ['1234567', Validators.required],
     terminos : [false, Validators.required],
+  },{
+    validators: this.passwordsIquals('password', 'password2')
   });
+
   constructor(private fb: FormBuilder) { }
 
   
@@ -52,6 +55,19 @@ export class RegisterComponent {
       return true;
     } else {
       return false;
+    }
+  }
+
+  passwordsIquals(pass1: string, pass2: string){
+    return (formGroup: FormGroup) =>{
+      const pass1Control = formGroup.get(pass1);
+      const pass2Control = formGroup.get(pass2);
+
+      if (pass1Control.value === pass2Control.value) {
+        pass2Control.setErrors(null)
+      } else {
+        pass2Control.setErrors({noEsIgual: true})
+      }
     }
   }
 
