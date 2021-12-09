@@ -32,3 +32,13 @@
 177 optimizacion del init de google
 
 178-179 tag
+
+181 Introduccion a la seccion
+    section 15 perfil del usuario, pipes y subida de fotografia
+        Módulo de pipes
+        Pipe para controlar la imagen a desplegar
+        Subida de imagen desde el Front-end hasta el Back-end
+        Crear el componente del perfil del usuario
+        Notificar actualización de imagen
+        Vista previa de la imagen seleccionada en tiempo real (sin subirla al backend)
+
