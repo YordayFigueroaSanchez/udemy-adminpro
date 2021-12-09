@@ -54,17 +54,6 @@ export class LoginComponent implements OnInit{
     //this.router.navigateByUrl('/');
   }
 
-  // onSuccess(googleUser) {
-  //   // console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-  //   var id_token = googleUser.getAuthResponse().id_token;
-  //   console.log(id_token);
-    
-  // }
-
-  // onFailure(error) {
-  //   console.log(error);
-  // }
-
   renderButton() {
     gapi.signin2.render('my-signin2', {
       'scope': 'profile email',
@@ -82,8 +71,7 @@ export class LoginComponent implements OnInit{
       this.auth2 = gapi.auth2.init({
         client_id: '370495668372-cg4v19vkci7evegl47gd5inqdv4hrm9m.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
+        
       });
       this.attachSignin(document.getElementById('my-signin2'));
     });

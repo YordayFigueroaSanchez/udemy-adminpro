@@ -10,14 +10,19 @@ import { Router } from '@angular/router';
 
 const base_url = environment.base_url;
 
+declare const gapi: any;
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
+  public auth2: any;
 
   constructor( private http: HttpClient,
-                private router: Router) { }
+                private router: Router) { 
+                  this.googleInit();
+                }
 
   crearUsuario (formData: RegisterForm){
     
@@ -70,6 +75,24 @@ export class UsuarioService {
 
   logout(){
     localStorage.removeItem('token');
-    this.router.navigateByUrl('/login');
+    
+    this.auth2.signOut().then( () => {
+      this.router.navigateByUrl('/login');
+      // console.log('User signed out.');
+    });
+
+
+  }
+
+  googleInit(){
+    gapi.load('auth2', () => {
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      this.auth2 = gapi.auth2.init({
+        client_id: '370495668372-cg4v19vkci7evegl47gd5inqdv4hrm9m.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        
+      });
+      
+    });
   }
 }
