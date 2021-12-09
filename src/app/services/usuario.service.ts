@@ -82,7 +82,7 @@ export class UsuarioService {
         
         this.router.navigateByUrl('/login');
         // console.log('User signed out.');
-        
+
       });
     });
 
@@ -90,14 +90,20 @@ export class UsuarioService {
   }
 
   googleInit(){
-    gapi.load('auth2', () => {
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      this.auth2 = gapi.auth2.init({
-        client_id: '370495668372-cg4v19vkci7evegl47gd5inqdv4hrm9m.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
+
+    return new Promise<void>( resolve => {
+
+      gapi.load('auth2', () => {
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        this.auth2 = gapi.auth2.init({
+          client_id: '370495668372-cg4v19vkci7evegl47gd5inqdv4hrm9m.apps.googleusercontent.com',
+          cookiepolicy: 'single_host_origin',
+          
+        });
         
+        resolve();
       });
-      
+
     });
   }
 }

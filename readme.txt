@@ -28,3 +28,5 @@
     borrar el LocalStorage
     login con google
     ngZone para procesos externos
+
+177 optimizacion del init de google
