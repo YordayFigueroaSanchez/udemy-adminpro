@@ -16,4 +16,6 @@
 173 obtener el token de una autenticacion google singin
     agregar boton de google y hacer uso de la api
     boton centrado
-    
+
+174 usar el token de google para autenticarnos
+    refactorizar guia de google para typescript 
