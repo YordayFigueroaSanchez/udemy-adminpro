@@ -30,3 +30,5 @@
     ngZone para procesos externos
 
 177 optimizacion del init de google
+
+178-179 tag
