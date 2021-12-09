@@ -96,8 +96,11 @@ export class LoginComponent implements OnInit{
           //     googleUser.getBasicProfile().getName();
           var id_token = googleUser.getAuthResponse().id_token;
           console.log(id_token);
+          this.usuarioService.loginGoogle(id_token).subscribe();
+
+          //TODO : redireccionar al dashboard
           
-        }, function(error) {
+        }, (error) => {
           alert(JSON.stringify(error, undefined, 2));
         });
   }
