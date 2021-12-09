@@ -42,8 +42,9 @@ export class LoginComponent implements OnInit{
     
     this.usuarioService.login(this.loginForm.value)
       .subscribe( resp => {
-        console.log("usuario creado");
-        console.log(resp);
+        
+        // redireccionar al dashboard
+        this.router.navigateByUrl('/');
         
       },(err) => {
         //si error
@@ -96,9 +97,12 @@ export class LoginComponent implements OnInit{
           //     googleUser.getBasicProfile().getName();
           var id_token = googleUser.getAuthResponse().id_token;
           console.log(id_token);
-          this.usuarioService.loginGoogle(id_token).subscribe();
+          this.usuarioService.loginGoogle(id_token).subscribe(  resp => {
+            
+            // redireccionar al dashboard
+            this.router.navigateByUrl('/');
+          });
 
-          //TODO : redireccionar al dashboard
           
         }, (error) => {
           alert(JSON.stringify(error, undefined, 2));
