@@ -48,4 +48,7 @@
 184 mostrar imagen del perfil del usuario
 
 185 optimizaciones dek email
-    
+
+186 crear componente del perfil del usuario
+    generar  componente dentro de pages
+        ng g c pages/perfil --skipTests -is
