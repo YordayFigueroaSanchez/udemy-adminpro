@@ -66,13 +66,13 @@ export class UsuarioService {
         'x-token': token
       }
      } ).pipe(
-       tap(( resp:any )=>{
+       map(( resp:any )=>{
         //  console.log(resp);
-         const {email, google, nombre, role, img, uid} = resp.usuario;
+         const {email, google, nombre, role, img = '', uid} = resp.usuario;
          this.usuario = new Usuario(email, nombre, '', img, google, role, uid);
          localStorage.setItem('token',resp.token)
+         return true;
        }),
-       map( resp => true),
        catchError(  error => of(false))
        
      )

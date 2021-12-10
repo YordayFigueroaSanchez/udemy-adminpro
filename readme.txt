@@ -46,4 +46,6 @@
     recuperar informacion del usuario y mantenerla en el servicio de usuario
 
 184 mostrar imagen del perfil del usuario
+
+185 optimizaciones dek email
     
