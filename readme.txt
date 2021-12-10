@@ -42,3 +42,7 @@
         Notificar actualización de imagen
         Vista previa de la imagen seleccionada en tiempo real (sin subirla al backend)
 
+183 centralizar la informacion del usuario conectado
+    recuperar informacion del usuario y mantenerla en el servicio de usuario
+
+
