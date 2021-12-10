@@ -45,4 +45,5 @@
 183 centralizar la informacion del usuario conectado
     recuperar informacion del usuario y mantenerla en el servicio de usuario
 
-
+184 mostrar imagen del perfil del usuario
+    
