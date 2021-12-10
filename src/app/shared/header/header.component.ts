@@ -10,9 +10,14 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class HeaderComponent {
 
   public imgUrl = '';
+  public nombre = '';
+  public email = '';
 
   constructor(private usurioService: UsuarioService) { 
+
     this.imgUrl = usurioService.usuario.imageUrl;
+    this.nombre = usurioService.usuario.nombre;
+    this.email = usurioService.usuario.email;
   }
 
   logout(){
