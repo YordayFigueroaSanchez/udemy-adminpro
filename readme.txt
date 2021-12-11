@@ -72,3 +72,6 @@
         archivo: File
         tipo: 'usuario' | 'medico' | 'hospital'
         id: string
+
+190 vista previs de la imagen seleccionada
+    actualiza los avatar simultaneamente al cambio
