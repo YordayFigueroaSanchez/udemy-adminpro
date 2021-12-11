@@ -82,3 +82,7 @@
 191 mensaje al usuario
     mensajes para el email
     mensaje para la imagen
+
+192 bloquear usuario de google  
+    frontend
+        reaOnly
