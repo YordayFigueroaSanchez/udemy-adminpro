@@ -78,3 +78,6 @@
     agregar vista del avatar
     centrando la imagen
     agregando reader
+
+191 mensaje al usuario
+    

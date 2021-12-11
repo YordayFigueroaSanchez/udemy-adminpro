@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
+
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { FileUploadService } from 'src/app/services/file-upload.service';
@@ -29,15 +31,19 @@ export class PerfilComponent implements OnInit {
   }
 
   actualizarPerfil(){
-    console.log(this.perfilForm.value);
+    // console.log(this.perfilForm.value);
     this.usuarioService.actualizarPerfil(this.perfilForm.value)
       .subscribe( resp => {
 
         const {nombre, email} = this.perfilForm.value;
         this.usuario.nombre = nombre;
         this.usuario.email = email;
-        console.log(resp);
+        // console.log(resp);
+        Swal.fire('Guardado', 'cambios fueron realizados','success');
         
+      },(err)=>{
+
+        Swal.fire('Error', err.error.msg,'error');
       });
 
     
