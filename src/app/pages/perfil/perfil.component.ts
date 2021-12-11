@@ -13,6 +13,7 @@ export class PerfilComponent implements OnInit {
   public perfilForm: FormGroup;
   public usuario:  Usuario;
   public imagenASubir: File;
+  public imagenTemp: any;
 
   constructor(private fb:FormBuilder,
               private usuarioService:UsuarioService,
@@ -43,8 +44,21 @@ export class PerfilComponent implements OnInit {
   }
 
   cambiarImagen(file: File){
-    console.log(file);
+    
     this.imagenASubir = file;
+
+    if (!file) {
+      return this.imagenTemp = null;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL( file  );
+
+    reader.onloadend = () => {
+      console.log(reader.result);
+      this.imagenTemp = reader.result;
+      
+    }
     
   }
 

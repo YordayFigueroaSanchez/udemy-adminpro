@@ -76,3 +76,5 @@
 190 vista previs de la imagen seleccionada
     actualiza los avatar simultaneamente al cambio
     agregar vista del avatar
+    centrando la imagen
+    agregando reader

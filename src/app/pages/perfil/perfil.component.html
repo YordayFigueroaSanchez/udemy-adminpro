@@ -52,8 +52,9 @@
 
                 <div class="text-center">
 
-                    <img [src]="usuario.imageUrl" class="img_avatar">
-                    
+                    <img *ngIf="!imagenTemp" [src]="usuario.imageUrl" class="img_avatar">
+                    <img *ngIf="imagenTemp" [src]="imagenTemp" class="img_avatar">
+
                 </div>
 
                 <input type="file" 
