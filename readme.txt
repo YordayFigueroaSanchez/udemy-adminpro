@@ -86,3 +86,5 @@
 192 bloquear usuario de google  
     frontend
         reaOnly
+    backend
+        no permite modificar correo de google
