@@ -11,7 +11,7 @@ import { FileUploadService } from 'src/app/services/file-upload.service';
 export class PerfilComponent implements OnInit {
 
   public perfilForm: FormGroup;
-  private usuario:  Usuario;
+  public usuario:  Usuario;
   public imagenASubir: File;
 
   constructor(private fb:FormBuilder,
