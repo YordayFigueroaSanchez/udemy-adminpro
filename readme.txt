@@ -57,3 +57,5 @@
     iniciamos con un usuario local, no de google
     el rol se esta enviando...se debe modificar el backend...para trabajar el tema rol
 
+188 actualizar el perfil del usuario - continuacion
+    se actualiza la referencia del servicio y se actualiza de forma general    
