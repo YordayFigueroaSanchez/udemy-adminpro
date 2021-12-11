@@ -73,6 +73,7 @@ export class PerfilComponent implements OnInit {
     .then( img => {
       this.usuario.img = img
       console.log(img)
+      Swal.fire('Imagen', 'cambios fueron realizados','success');
     }
     );
   }

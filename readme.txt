@@ -80,4 +80,5 @@
     agregando reader
 
 191 mensaje al usuario
-    
+    mensajes para el email
+    mensaje para la imagen
