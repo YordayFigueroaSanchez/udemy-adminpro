@@ -55,4 +55,5 @@
 
 187 actualizar el perfil del usuario    
     iniciamos con un usuario local, no de google
-    
+    el rol se esta enviando...se debe modificar el backend...para trabajar el tema rol
+
