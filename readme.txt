@@ -70,5 +70,5 @@
     usar el fetch api de javascript
     metodo async actualizarFoto
         archivo: File
-        tipo: 'usuarios' | 'medicos' | 'hospitales'
+        tipo: 'usuario' | 'medico' | 'hospital'
         id: string
