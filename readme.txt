@@ -59,3 +59,16 @@
 
 188 actualizar el perfil del usuario - continuacion
     se actualiza la referencia del servicio y se actualiza de forma general    
+
+189 servicio de carga de imagenes
+    uid
+    imagen
+    token
+    servicio para utilizarlo en varios lugares
+    crear servicio para imagen
+        ng g s services/fileUpload --skipTests
+    usar el fetch api de javascript
+    metodo async actualizarFoto
+        archivo: File
+        tipo: 'usuarios' | 'medicos' | 'hospitales'
+        id: string

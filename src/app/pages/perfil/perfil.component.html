@@ -52,12 +52,18 @@
 
                 <img src="" alt="">
 
-                <input type="file" name="" id="">
+                <input type="file" 
+                    name="" 
+                    (change)="cambiarImagen($event.target.files[0])"
+                    id="">
 
                 <br>
                 <br>
 
-                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10 btn-block">
+                <button type="submit" 
+                    [disabled]="!imagenASubir"
+                    (click)="subirImagen()"
+                    class="btn btn-success waves-effect waves-light m-r-10 btn-block">
                     <i class="fa fa-save"></i>
                     Guardar cambio
                 </button>
