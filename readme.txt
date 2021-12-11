@@ -52,3 +52,7 @@
 186 crear componente del perfil del usuario
     generar  componente dentro de pages
         ng g c pages/perfil --skipTests -is
+
+187 actualizar el perfil del usuario    
+    iniciamos con un usuario local, no de google
+    
