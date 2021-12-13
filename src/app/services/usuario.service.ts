@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 import { RegisterForm } from '../interfaces/register_form.interfaces';
 import { LoginForm } from '../interfaces/login_form.interfaces';
+import { CargarUsuario } from '../interfaces/cargar-usuarios.interfaces';
 import { environment } from 'src/environments/environment';
 import { Usuario } from "../models/usuario.model";
 
@@ -143,6 +144,6 @@ export class UsuarioService {
 
   cargarUsuarios(desde: number = 0){
     const url = `${ base_url }/usuarios?desde=${ desde }`;
-    return this.http.get<{total:number, usuarios:Usuario[]}>(url, this.headers);
+    return this.http.get<CargarUsuario>(url, this.headers);
   }
 }
