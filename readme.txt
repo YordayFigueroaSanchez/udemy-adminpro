@@ -99,4 +99,6 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     Crear un modal para la subida de la imagen
     Emitir notificaciones de cambio en imagenes
 197 continuacion del proyecto
-    
+198 crear el componente de usuarios
+    crear mantenimientos (directorio dentro de pages)
+        ng g c pages/mantenimientos/usuarios --skipTests -is
