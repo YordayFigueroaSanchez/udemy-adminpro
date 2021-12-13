@@ -1,6 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, delay, map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -146,8 +146,9 @@ export class UsuarioService {
     const url = `${ base_url }/usuarios?desde=${ desde }`;
     return this.http.get<CargarUsuario>(url, this.headers)
                   .pipe(
+                    // delay(5000),
                     map(resp => {
-                      console.log(resp);
+                      // console.log(resp);
                       
                       const usuarios = resp.usuarios.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role));
                       return {

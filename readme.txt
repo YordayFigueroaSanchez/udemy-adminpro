@@ -107,4 +107,6 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     agregando interfaz para el tipado
 200 paginar los usuarios
 201 detalles esteticos de nuestra pagina
+202 mensaje de carga de informacion
     
+
