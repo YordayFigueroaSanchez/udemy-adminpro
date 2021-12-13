@@ -105,3 +105,5 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 199 cargar los usuarios de forma paginada
     tipado directo
     agregando interfaz para el tipado
+200 paginar los usuarios
+    
