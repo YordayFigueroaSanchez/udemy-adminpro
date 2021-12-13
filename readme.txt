@@ -88,3 +88,15 @@
         reaOnly
     backend
         no permite modificar correo de google
+
+Section 16 mantenimiento de usuarios y modal de carga de imagenes
+195 Introduccion
+196 temas puntuales que cubriremos
+    Crear componente de usuarios
+    Búsqueda de usuarios
+    Borrar usuario
+    Actualizar Rol del usuario
+    Crear un modal para la subida de la imagen
+    Emitir notificaciones de cambio en imagenes
+197 continuacion del proyecto
+    
