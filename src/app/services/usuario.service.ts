@@ -36,6 +36,14 @@ export class UsuarioService {
     return this.usuario.uid || '';
   }
 
+  get headers() {
+    return {
+      headers: {
+        'x-token': this.token
+      }
+    }
+  }
+
   crearUsuario (formData: RegisterForm){
     
     return this.http.post(`${ base_url }/usuarios`, formData)
@@ -131,5 +139,10 @@ export class UsuarioService {
       });
 
     });
+  }
+
+  cargarUsuarios(desde: number = 0){
+    const url = `${ base_url }/usuarios?desde=${ desde }`;
+    return this.http.get<{total:number, usuarios:Usuario[]}>(url, this.headers);
   }
 }

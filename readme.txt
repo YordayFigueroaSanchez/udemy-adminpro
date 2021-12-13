@@ -102,3 +102,5 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 198 crear el componente de usuarios
     crear mantenimientos (directorio dentro de pages)
         ng g c pages/mantenimientos/usuarios --skipTests -is
+199 cargar los usuarios de forma paginada
+    tipado directo
