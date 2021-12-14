@@ -50,6 +50,7 @@ export class UsuariosComponent implements OnInit {
   buscar( termino ){
     this.busquedasService.buscar('usuarios',termino).subscribe( resp => {  
       console.log(resp);
+      this.usuarios = resp;
     });
   }
 
