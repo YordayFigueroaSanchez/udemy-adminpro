@@ -119,7 +119,9 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 206 frontend - no borrar el propio usuario
     validar en el frontend
 207 actualizar el rol del usuario
-    
+208 modal para carga de imagenes
+    Modal ()
+    crear componente ng g c components/modalImagen --skipTests -is
 
 
 
