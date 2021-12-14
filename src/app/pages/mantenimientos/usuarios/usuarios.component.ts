@@ -106,7 +106,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   abrirModal(usuarioLocal: Usuario){
-    this.modalService.abrirModal();
+    this.modalService.abrirModal('usuario', usuarioLocal.uid, usuarioLocal.img);
     console.log(usuarioLocal);
     
   }
