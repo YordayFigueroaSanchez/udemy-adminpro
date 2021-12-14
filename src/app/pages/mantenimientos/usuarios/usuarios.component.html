@@ -39,7 +39,7 @@
                                 <th>Nombre</th>
                                 <th class="w.100">Role</th>
                                 <th class="w.100">Auth</th>
-                                <th class="text-nowrap w100">Accion</th>
+                                <th class="text-nowrap w140">Accion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +55,13 @@
                                     <span *ngIf="!usuario.google" class="label label-info">Local</span>
                                 </td>
                                 <td class="text-nowrap text-center">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                    <select class="form-control" 
+                                            [(ngModel)]="usuario.role"
+                                            (change)="cambiarRol(usuario)"
+                                            >
+                                        <option value="ADMIN_ROLE">Admin</option>
+                                        <option value="USER_ROLE">User</option>
+                                    </select>
                                     <a  data-toggle="tooltip" 
                                         data-original-title="Borrar"
                                         class="cursor"

@@ -93,4 +93,14 @@ export class UsuariosComponent implements OnInit {
     
   }
 
+  cambiarRol(usuario: Usuario){
+    this.usuarioService.actualizarRol(usuario)
+    .subscribe( resp => {
+      console.log(resp);
+      
+    });
+    console.log(usuario);
+    
+  }
+
 }

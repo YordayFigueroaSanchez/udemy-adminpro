@@ -118,6 +118,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 205 borrando usuarios
 206 frontend - no borrar el propio usuario
     validar en el frontend
+207 actualizar el rol del usuario
+    
 
 
 
