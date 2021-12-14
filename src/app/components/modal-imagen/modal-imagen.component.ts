@@ -10,6 +10,9 @@ import { ModalImagenService } from 'src/app/services/modal-imagen.service';
 })
 export class ModalImagenComponent implements OnInit {
 
+  public imagenASubir: File;
+  public imagenTemp: any;
+
   
   constructor(public modalservice: ModalImagenService) { }
 
@@ -18,6 +21,26 @@ export class ModalImagenComponent implements OnInit {
 
   cerrarModal(){
     this.modalservice.cerrarModal();
+    this.imagenTemp = null;
+  }
+
+  cambiarImagen(file: File){
+    
+    this.imagenASubir = file;
+
+    if (!file) {
+      return this.imagenTemp = null;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL( file  );
+
+    reader.onloadend = () => {
+      console.log(reader.result);
+      this.imagenTemp = reader.result;
+      
+    }
+    
   }
 
 }
