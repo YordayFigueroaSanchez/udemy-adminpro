@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { BusquedasService } from 'src/app/services/busquedas.service';
 import Swal from 'sweetalert2';
 import { ModalImagenService } from 'src/app/services/modal-imagen.service';
+import { delay } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios',
@@ -11,7 +13,7 @@ import { ModalImagenService } from 'src/app/services/modal-imagen.service';
   styles: [
   ]
 })
-export class UsuariosComponent implements OnInit {
+export class UsuariosComponent implements OnInit, OnDestroy {
 
   public totalUsuarios: number = 0;
   public usuarios:  Usuario[] = [];
@@ -19,12 +21,29 @@ export class UsuariosComponent implements OnInit {
   public desde: number = 0;
   public cargando:  boolean = true;
 
+  public imagenSubs: Subscription;
+
   constructor(private usuarioService:UsuarioService,
               private busquedasService:BusquedasService,
               private modalService: ModalImagenService) { }
+  
+  ngOnDestroy(): void {
+    this.imagenSubs.unsubscribe();
+  }
 
   ngOnInit(): void {
     this.cambiarUsuarios();
+
+    this.imagenSubs = this.modalService.nuevaImagen
+    .pipe(
+      delay(1000)
+    )
+    .subscribe(img => {
+      
+      console.log(img);
+      this.cambiarUsuarios()
+
+    });
   }
 
   cambiarUsuarios(){

@@ -126,7 +126,9 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     ng g s services/modalImagen --skipTests
 210 cargar imagenes usando el modal
     seleccionar imagen y mostrar en el modal
-    
+211 actualizar la imagen del usuario desde el modal
+
+
 
 
 
