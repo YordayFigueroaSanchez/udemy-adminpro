@@ -114,5 +114,6 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 204 pulir busqueda de usuarios
     eliminar error de termino vacio en la busqueda
     sacar botones con busqueda
+    colocar imagen
 
 
