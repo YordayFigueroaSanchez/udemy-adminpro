@@ -150,7 +150,7 @@ export class UsuarioService {
                     map(resp => {
                       // console.log(resp);
                       
-                      const usuarios = resp.usuarios.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role));
+                      const usuarios = resp.usuarios.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role,user.uid));
                       return {
                         total:  resp.total,
                         usuarios 
@@ -158,5 +158,14 @@ export class UsuarioService {
                     })
                   );
                 
+  }
+
+  eliminar(usuarioBorar: Usuario){
+    // console.log(usuarioBorar);
+    const url = `${ base_url }/usuarios/${ usuarioBorar.uid }`;
+    // console.log(url);
+    
+    return this.http.delete(url, this.headers)
+    
   }
 }

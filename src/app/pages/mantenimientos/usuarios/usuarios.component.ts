@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { BusquedasService } from 'src/app/services/busquedas.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-usuarios',
@@ -58,6 +59,34 @@ export class UsuariosComponent implements OnInit {
       console.log(resp);
       this.usuarios = resp;
     });
+  }
+
+  eliminar(usuario: Usuario){
+    Swal.fire({
+      title: '¿Borrar usuario?',
+      text: `Esta por borrar el usuario ${usuario.nombre}`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si borrar !'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.usuarioService.eliminar(usuario)
+        .subscribe(resp => {
+          
+          this.cambiarUsuarios();
+
+          Swal.fire(
+            'Usuario eliminado!',
+            `El usuario ${usuario.nombre} fue eliminado.`,
+            'success'
+          )
+          
+        })
+      }
+    })
+    
   }
 
 }

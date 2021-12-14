@@ -51,7 +51,7 @@ export class BusquedasService {
   }
 
   private transformar(resultados: any[]):Usuario[]{
-    return resultados.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role));
+    return resultados.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role,user.uid));
   }
 
 }
