@@ -5,6 +5,8 @@
                 <input  type="text" 
                         placeholder="Buscar usuario ..."
                         class="form-control"
+                        (keyup)="buscar(busquedaTxt.value)"
+                        #busquedaTxt
                         />
                 
             </div>

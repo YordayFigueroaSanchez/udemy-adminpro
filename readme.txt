@@ -108,5 +108,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 200 paginar los usuarios
 201 detalles esteticos de nuestra pagina
 202 mensaje de carga de informacion
-    
+203 busqueda de usuarios
+    ng g s services/busquedas --skipTests
+    busqueda primeros pasos
+
 
