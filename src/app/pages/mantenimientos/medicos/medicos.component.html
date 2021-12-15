@@ -5,6 +5,8 @@
                 <input  type="text" 
                         placeholder="Buscar medicos ..."
                         class="form-control"
+                        (keyup)="buscar(busquedaTxt.value)"
+                        #busquedaTxt
                         />
                 
             </div>
@@ -28,8 +30,25 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Medicos</h4>
-                <h6 class="card-subtitle">Medicos registrados.</h6>
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Medicos ({{ medicos.length}})</h4>
+                        <h6 class="card-subtitle">Medicos registrados.</h6>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="text-right">
+                            <button class="btn btn-primary"
+                                    routerLink="/dashboard/medico/nuevo"
+                                    >
+                                <i class="fa fa-hospital-o"></i>
+                                Crear medico
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>

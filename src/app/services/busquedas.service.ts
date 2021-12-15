@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { Usuario } from '../models/usuario.model';
 import { Hospital } from '../models/hospital.model';
+import { Medico } from '../models/medico.model';
 
 
 const base_url = environment.base_url;
@@ -47,6 +48,10 @@ export class BusquedasService {
                       return this.transformarHospital(resp.resultados)
                       break;
                 
+                      case 'medicos':
+                        return this.transformarMedicos(resp.resultados)
+                        break;
+
                   default:
                     return [];
                     break;
@@ -60,6 +65,10 @@ export class BusquedasService {
   }
 
   private transformarHospital(resultados: any[]):Hospital[]{
+    return resultados;
+  }
+
+  private transformarMedicos(resultados: any[]):Medico[]{
     return resultados;
   }
 

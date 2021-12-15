@@ -152,6 +152,7 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     224 tarea
 225 buscar medicos y redireccion al componente de medico
     225 redireccion
+    225 buscar
 
 
 
