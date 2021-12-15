@@ -139,6 +139,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 220 crud de hospitales
 221 funcionamiento del mantenimiento de hospitales
     https://sweetalert2.github.io/#input-types
+222 busqueda de hospitales
+    tarea 222
 
 
 

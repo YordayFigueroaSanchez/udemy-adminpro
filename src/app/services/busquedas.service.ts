@@ -39,8 +39,12 @@ export class BusquedasService {
               map(  (resp:  any) => {
                 switch (tipo) {
                   case 'usuarios':
-                    return this.transformar(resp.resultados)
+                    return this.transformarUsuario(resp.resultados)
                     break;
+
+                    case 'hospitales':
+                      return resp.resultados
+                      break;
                 
                   default:
                     return [];
@@ -50,7 +54,7 @@ export class BusquedasService {
             )
   }
 
-  private transformar(resultados: any[]):Usuario[]{
+  private transformarUsuario(resultados: any[]):Usuario[]{
     return resultados.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role,user.uid));
   }
 

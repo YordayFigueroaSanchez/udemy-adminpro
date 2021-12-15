@@ -5,6 +5,8 @@
                 <input  type="text" 
                         placeholder="Buscar hospital ..."
                         class="form-control"
+                        (keyup)="buscar(busquedaTxt.value)"
+                        #busquedaTxt
                         />
                 
             </div>
