@@ -136,7 +136,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 219 pipes para mostrar imagenes
     ng g pipe pipes/imagen --skipTests
     ng g m pipes/pipes --flat
-
+220 crud de hospitales
+    
 
 
 
