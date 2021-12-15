@@ -130,6 +130,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 212 guardar cambios en github
 216 section 17 diseño de la panatalla de hospitales
     ng g c pages/mantenimientos/hospitales --skipTests -is
+217 modelo y servicio de hospitales
+    ng g s services/hospital --skipTests
 
 
 
