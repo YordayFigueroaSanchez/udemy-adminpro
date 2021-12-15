@@ -14,6 +14,8 @@ import { PagesComponent } from './pages.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
+import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
+import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
 
 
 
@@ -27,6 +29,8 @@ import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component'
     AccountSettingsComponent,
     PerfilComponent,
     UsuariosComponent,
+    HospitalesComponent,
+    MedicosComponent,
   ],
   exports: [
     DashboardComponent,

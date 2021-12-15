@@ -128,6 +128,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     seleccionar imagen y mostrar en el modal
 211 actualizar la imagen del usuario desde el modal
 212 guardar cambios en github
+216 section 17 diseño de la panatalla de hospitales
+    ng g c pages/mantenimientos/hospitales --skipTests -is
 
 
 

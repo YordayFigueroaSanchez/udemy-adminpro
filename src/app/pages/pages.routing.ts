@@ -10,6 +10,8 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
+import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
+import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
 
 const routes: Routes = [
     { 
@@ -25,6 +27,8 @@ const routes: Routes = [
 
             //mantenimientos
             { path: 'usuarios', component: UsuariosComponent, data:{    titulo: "Mantenimiento de Usuarios"} },
+            { path: 'hospitales', component: HospitalesComponent, data:{    titulo: "Mantenimiento de Hospitales"} },
+            { path: 'medicos', component: MedicosComponent, data:{    titulo: "Mantenimiento de Medicos"} },
         ]
     },
 ];
