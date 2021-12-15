@@ -142,6 +142,12 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 222 busqueda de hospitales
     tarea 222
     222 profesor
+223 componente de medico, medicos y servicio de medicos
+    model de medicos
+    service medico 
+        ng g s services/medico --skipTests
+    componente para medico
+        ng g c pages/mantenimientos/medicos/medico --skipTests -is  -flat  
 
 
 
