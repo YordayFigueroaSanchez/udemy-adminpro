@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+import { Medico } from 'src/app/models/medico.model';
+
+import { MedicoService } from "src/app/services/medico.service";
 
 @Component({
   selector: 'app-medicos',
@@ -8,9 +13,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicosComponent implements OnInit {
 
-  constructor() { }
+  public medicos:  Medico[] = [];
+  public cargando: boolean;
+
+  public imagenSubs: Subscription;
+
+  constructor(private medicoService: MedicoService) { }
 
   ngOnInit(): void {
+    this.cargarMedicos();
+  }
+
+
+  cargarMedicos(){
+    this.cargando = true;
+    this.medicoService.cargarMedicos()
+      .subscribe( medicosResponse => {
+        console.log(medicosResponse);
+
+        this.cargando = false;
+        this.medicos = medicosResponse;
+        
+      })
   }
 
 }

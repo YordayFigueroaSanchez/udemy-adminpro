@@ -148,6 +148,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
         ng g s services/medico --skipTests
     componente para medico
         ng g c pages/mantenimientos/medicos/medico --skipTests -is  -flat  
+224 servicio de medicos CRUD
+    224 tarea
 
 
 

@@ -1,11 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import Swal from 'sweetalert2';
+
 import { Hospital } from 'src/app/models/hospital.model';
+
 import { BusquedasService } from 'src/app/services/busquedas.service';
 import { HospitalService } from "src/app/services/hospital.service";
 import { ModalImagenService } from 'src/app/services/modal-imagen.service';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-hospitales',
