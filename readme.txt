@@ -150,6 +150,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
         ng g c pages/mantenimientos/medicos/medico --skipTests -is  -flat  
 224 servicio de medicos CRUD
     224 tarea
+225 buscar medicos y redireccion al componente de medico
+    225 redireccion
 
 
 
