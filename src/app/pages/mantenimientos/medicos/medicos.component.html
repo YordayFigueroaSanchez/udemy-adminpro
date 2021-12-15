@@ -41,7 +41,12 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let medico of medicos">
-                                <td>foto</td>
+                                <td class="text-center cursor">
+                                    <img    [src]="medico.img  | imagen:'medico'" 
+                                            [alt]="medico.nombre"
+                                            (click)="abrirModal(medico)"
+                                            class="avatar">
+                                </td>
                                 <td>{{  medico.nombre }}</td>
                                 <td class="text-nowrap text-center">
                                     <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>

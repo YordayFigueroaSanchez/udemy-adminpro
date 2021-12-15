@@ -36,4 +36,19 @@ export class MedicoService {
                 
   }
 
+  crearMedico(nombre: string){
+    const url = `${ base_url }/medicos`;
+    return this.http.post(url, {nombre}, this.headers);
+  }
+
+  actualizarMedico(_id: string, nombre: string){
+    const url = `${ base_url }/medicos/${ _id  }`;
+    return this.http.put(url, {nombre}, this.headers);
+  }
+
+  borrarMedico(_id: string){
+    const url = `${ base_url }/medicos/${ _id  }`;
+    return this.http.delete(url, this.headers);
+  }
+
 }
