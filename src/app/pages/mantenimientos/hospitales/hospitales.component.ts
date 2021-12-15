@@ -73,7 +73,7 @@ export class HospitalesComponent implements OnInit, OnDestroy {
   }
 
   async abrirSweetAlert(){
-    const { value} = await Swal.fire<string>({
+    const { value = ''} = await Swal.fire<string>({
       input: 'text',
       text: 'Ingrese el nombre del hospital',
       title: 'Crear Hospital',
