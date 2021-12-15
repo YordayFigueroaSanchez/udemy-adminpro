@@ -36,7 +36,8 @@
                     </div>
                     <div class="col">
                         <div class="text-right">
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary"
+                                    (click)="abrirSweetAlert()">
                                 <i class="fa fa-hospital-o"></i>
                                 Crear hospital
                             </button>
@@ -51,7 +52,7 @@
                             <tr>
                                 <th class="w100">Foto</th>
                                 <th>Nombre</th>
-                                <th class="text-nowrap">Accion</th>
+                                <th class="text-nowrap w100">Accion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,6 +60,7 @@
                                 <td class="text-center cursor">
                                     <img    [src]="hospital.img  | imagen:'hospital'" 
                                             [alt]="hospital.nombre"
+                                            (click)="abrirModal(hospital)"
                                             class="avatar">
                                 </td>
                                 <td>
@@ -68,8 +70,18 @@
                                             class="form-control">
                                 </td>
                                 <td class="text-nowrap text-center">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Guardar"> <i class="fa fa-save text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Cerrar"> <i class="fa fa-close text-danger"></i> </a>
+                                    <a (click)="guardarHospital(hospital)" 
+                                        data-toggle="tooltip" 
+                                        data-original-title="Guardar"
+                                        class="cursor"> 
+                                        <i class="fa fa-save text-inverse m-r-10"></i> 
+                                    </a>
+                                    <a (click)="eliminarHospital(hospital)" 
+                                        data-toggle="tooltip" 
+                                        data-original-title="Cerrar"
+                                        class="cursor"> 
+                                        <i class="fa fa-close text-danger"></i> 
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
