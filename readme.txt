@@ -133,7 +133,10 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 217 modelo y servicio de hospitales
     ng g s services/hospital --skipTests
 218 mostrar los hospitales en el html
-    
+219 pipes para mostrar imagenes
+    ng g pipe pipes/imagen --skipTests
+    ng g m pipes/pipes --flat
+
 
 
 
