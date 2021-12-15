@@ -132,7 +132,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     ng g c pages/mantenimientos/hospitales --skipTests -is
 217 modelo y servicio de hospitales
     ng g s services/hospital --skipTests
-
+218 mostrar los hospitales en el html
+    
 
 
 
