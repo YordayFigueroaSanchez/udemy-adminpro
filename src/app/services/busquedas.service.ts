@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { Usuario } from '../models/usuario.model';
+import { Hospital } from '../models/hospital.model';
 
 
 const base_url = environment.base_url;
@@ -43,7 +44,7 @@ export class BusquedasService {
                     break;
 
                     case 'hospitales':
-                      return resp.resultados
+                      return this.transformarHospital(resp.resultados)
                       break;
                 
                   default:
@@ -56,6 +57,10 @@ export class BusquedasService {
 
   private transformarUsuario(resultados: any[]):Usuario[]{
     return resultados.map( user => new Usuario(user.email,user.nombre,'',user.img,user.google,user.role,user.uid));
+  }
+
+  private transformarHospital(resultados: any[]):Hospital[]{
+    return resultados;
   }
 
 }

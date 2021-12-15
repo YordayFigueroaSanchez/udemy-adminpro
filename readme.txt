@@ -141,6 +141,7 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     https://sweetalert2.github.io/#input-types
 222 busqueda de hospitales
     tarea 222
+    222 profesor
 
 
 
