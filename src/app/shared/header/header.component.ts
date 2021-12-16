@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -12,7 +13,8 @@ export class HeaderComponent {
 
   public usuario: Usuario;
 
-  constructor(private usurioService: UsuarioService) { 
+  constructor(private usurioService: UsuarioService,
+              private router:Router) { 
 
     this.usuario = usurioService.usuario;
     
@@ -23,7 +25,8 @@ export class HeaderComponent {
   }
 
   buscar(txtTermino: string){
-    console.log(txtTermino);
+    // console.log(txtTermino);
+    this.router.navigateByUrl('/dashboard/buscar/' + txtTermino)
     
   }
 }

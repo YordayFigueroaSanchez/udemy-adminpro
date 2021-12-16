@@ -13,6 +13,7 @@ import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component'
 import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
 import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
 import { MedicoComponent } from './mantenimientos/medicos/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 const routes: Routes = [
     { 
@@ -21,16 +22,17 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         children: [
             { path: '', component: DashboardComponent },
-            { path: 'progress', component: ProgressComponent },
-            { path: 'grafica1', component: Grafica1Component },
             { path: 'account-settings', component: AccountSettingsComponent },
+            { path: 'buscar/:termino', component: BusquedaComponent , data:{    titulo: "Mantenimiento de Medicos"} },
+            { path: 'grafica1', component: Grafica1Component },
+            { path: 'progress', component: ProgressComponent },
             { path: 'perfil', component: PerfilComponent },
 
             //mantenimientos
-            { path: 'usuarios', component: UsuariosComponent, data:{    titulo: "Mantenimiento de Usuarios"} },
             { path: 'hospitales', component: HospitalesComponent, data:{    titulo: "Mantenimiento de Hospitales"} },
             { path: 'medicos', component: MedicosComponent, data:{    titulo: "Mantenimiento de Medicos"} },
             { path: 'medico/:id', component: MedicoComponent, data:{    titulo: "Mantenimiento de Medico"} },
+            { path: 'usuarios', component: UsuariosComponent, data:{    titulo: "Mantenimiento de Usuarios"} },
         ]
     },
 ];

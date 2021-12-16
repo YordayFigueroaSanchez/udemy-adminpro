@@ -16,7 +16,7 @@ const base_url = environment.base_url;
 })
 export class BusquedasService {
 
-
+  
   constructor(private http: HttpClient,) { }
 
   get token(): string {
@@ -29,6 +29,12 @@ export class BusquedasService {
         'x-token': this.token
       }
     }
+  }
+
+  buscarGlobal(termino: string){
+    //http://localhost:3000/api/busqueda/global/s
+    const url = `${ base_url }/busqueda/global/${termino}`;
+    return this.http.get(url, this.headers)
   }
 
   buscar( tipo:  'usuarios'|'hospitales'|'medicos',

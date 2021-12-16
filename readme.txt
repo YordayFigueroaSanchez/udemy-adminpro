@@ -175,7 +175,10 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     Página 404
     Manejo de errores
 238 continuacion de proyecto - busqueda global
-        
+239 componente para busquedas globales
+    ng g c pages/busqueda --skipTests -is
+240 mostrar informacion de la busqueda
+
 
 
 
