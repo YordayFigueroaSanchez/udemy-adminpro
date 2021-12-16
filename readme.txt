@@ -164,7 +164,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 232 actualizar medico
     desectructuracion
 233 cargar imagen del hospital al editar
-    
+234 guardar cambios de la seccion
+
 
 
 
