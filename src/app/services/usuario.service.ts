@@ -45,12 +45,18 @@ export class UsuarioService {
     }
   }
 
+  private guardarLocalStorage(token: string, menu: any){
+    localStorage.setItem('token',token);
+    localStorage.setItem('menu',JSON.stringify(menu));
+  }
+
   crearUsuario (formData: RegisterForm){
     
     return this.http.post(`${ base_url }/usuarios`, formData)
           .pipe(
             tap((resp: any) => {
-              localStorage.setItem('token',resp.token)  
+              // localStorage.setItem('token',resp.token)  
+              this.guardarLocalStorage(resp.token, resp.menu)
             })
           )
   }
@@ -68,7 +74,8 @@ export class UsuarioService {
     return this.http.post(`${ base_url }/login`, formData)
           .pipe(
             tap((resp: any) => {
-              localStorage.setItem('token',resp.token)  
+              // localStorage.setItem('token',resp.token)  
+              this.guardarLocalStorage(resp.token, resp.menu)
             })
           )
   }
@@ -80,7 +87,9 @@ export class UsuarioService {
             tap((resp: any) => {
               console.log(resp);
               
-              localStorage.setItem('token',resp.token)  
+              // localStorage.setItem('token',resp.token)  
+              this.guardarLocalStorage(resp.token, resp.menu)
+
             })
           )
   }
@@ -96,7 +105,8 @@ export class UsuarioService {
         //  console.log(resp);
          const {email, google, nombre, role, img = '', uid} = resp.usuario;
          this.usuario = new Usuario(email, nombre, '', img, google, role, uid);
-         localStorage.setItem('token',resp.token)
+        //  localStorage.setItem('token',resp.token)
+        this.guardarLocalStorage(resp.token, resp.menu)
          return true;
        }),
        catchError(  error => of(false))
@@ -107,6 +117,7 @@ export class UsuarioService {
 
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('menu');
     
     this.auth2.signOut().then( () => {
       this.ngZone.run(() => {
