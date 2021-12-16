@@ -10,11 +10,12 @@
                         [formGroup]="medicoForm">
     
     
-                    <div class="form-group row">
+                    <div class="form-group row"
+                            *ngIf="medicoSeleccionado">
                         <label for="exampleInputuname3" class="col-sm-3 control-label">Foto</label>
                         <div class="col-sm-9">
                             <div class="input-group">
-                                <img src="http://localhost:3000/api/upload/usuario/2d71f22a-0975-42c9-971d-e76dd669c6ea8.png" 
+                                <img [src]="medicoSeleccionado.img | imagen:'medico'" 
                                         class="w200"/>
                             </div>
                         </div>

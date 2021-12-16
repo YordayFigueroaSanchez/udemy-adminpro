@@ -159,6 +159,7 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 229 mostrar informacion del hospital seleccionado
 230 crear medico en base de datos
     guardar medico fijo
+    trabajo en la imagen del medico
 
 
 
