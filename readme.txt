@@ -163,6 +163,7 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 231 cargar un medico seleccionado
 232 actualizar medico
     desectructuracion
+    
 
 
 

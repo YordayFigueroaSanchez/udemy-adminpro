@@ -41,9 +41,9 @@ export class MedicoService {
     return this.http.post(url, medico, this.headers);
   }
 
-  actualizarMedico(_id: string, nombre: string){
-    const url = `${ base_url }/medicos/${ _id  }`;
-    return this.http.put(url, {nombre}, this.headers);
+  actualizarMedico(medico: Medico){
+    const url = `${ base_url }/medicos/${ medico._id  }`;
+    return this.http.put(url, medico, this.headers);
   }
 
   borrarMedico(_id: string){
