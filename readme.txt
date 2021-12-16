@@ -160,6 +160,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 230 crear medico en base de datos
     guardar medico fijo
     trabajo en la imagen del medico
+231 cargar un medico seleccionado
+    
 
 
 
