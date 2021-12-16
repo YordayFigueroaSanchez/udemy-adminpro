@@ -36,9 +36,9 @@ export class MedicoService {
                 
   }
 
-  crearMedico(nombre: string){
+  crearMedico(medico: {nombre: string, hospital: string}){
     const url = `${ base_url }/medicos`;
-    return this.http.post(url, {nombre}, this.headers);
+    return this.http.post(url, medico, this.headers);
   }
 
   actualizarMedico(_id: string, nombre: string){
