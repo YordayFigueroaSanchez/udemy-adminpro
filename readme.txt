@@ -154,7 +154,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     225 redireccion
     225 buscar
 226 borrar medico
-227 preparar formulario de creacion de medicos
+227 componente medico - estructura html
+
 
 
 
