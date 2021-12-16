@@ -180,7 +180,9 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 240 mostrar informacion de la busqueda
 241 menu del lado del servidor
 242 cargar menu
-    
+243 admin guard
+    ng g guard guards/admin --skipTests
+
 
 
 

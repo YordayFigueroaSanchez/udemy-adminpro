@@ -45,6 +45,10 @@ export class UsuarioService {
     }
   }
 
+  get rol(): 'ADMIN_ROL' | 'USER_ROL' {
+    return this.usuario.role;
+  }
+
   private guardarLocalStorage(token: string, menu: any){
     localStorage.setItem('token',token);
     localStorage.setItem('menu',JSON.stringify(menu));
