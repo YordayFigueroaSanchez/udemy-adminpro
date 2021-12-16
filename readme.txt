@@ -178,6 +178,8 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 239 componente para busquedas globales
     ng g c pages/busqueda --skipTests -is
 240 mostrar informacion de la busqueda
+241 menu del lado del servidor
+    
 
 
 
