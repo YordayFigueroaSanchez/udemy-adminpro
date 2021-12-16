@@ -21,4 +21,9 @@ export class HeaderComponent {
   logout(){
     this.usurioService.logout();
   }
+
+  buscar(txtTermino: string){
+    console.log(txtTermino);
+    
+  }
 }

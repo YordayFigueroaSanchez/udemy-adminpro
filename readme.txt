@@ -165,6 +165,17 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     desectructuracion
 233 cargar imagen del hospital al editar
 234 guardar cambios de la seccion
+236 section 18
+    menu dinamico desde el backend
+    buscador global
+237 Componente de búsqueda global
+    Menú del lado del servidor
+    AdminGuard - Un guard para verificar si es administrador
+    Recuperar información del TOKEN desde el front-end sin comunicación intermedia
+    Página 404
+    Manejo de errores
+238 continuacion de proyecto - busqueda global
+        
 
 
 
