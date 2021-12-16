@@ -55,9 +55,13 @@ export class MedicoComponent implements OnInit {
   private cargarMedico(uid: string){
     this.medicoService.getMedicoById(uid)
       .subscribe((  medico  )=>{
+
         console.log(medico);
         this.medicoSeleccionado = medico;
         
+        const { nombre, hospital:{_id}  } = medico;
+        this.medicoForm.setValue({nombre, hospital:_id})
+
       })
   }
 

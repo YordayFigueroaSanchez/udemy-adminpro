@@ -161,7 +161,9 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     guardar medico fijo
     trabajo en la imagen del medico
 231 cargar un medico seleccionado
-    
+232 actualizar medico
+    desectructuracion
+
 
 
 
