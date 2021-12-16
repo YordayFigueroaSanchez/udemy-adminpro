@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col">
+    <div class="col-md-6">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Medico</h4>
@@ -71,14 +71,14 @@
         </div>
     </div>
 
-    <div class="col">
+    <div class="col" *ngIf="hospitalSeleccionado">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Hospital</h4>
-                <h6 class="card-subtitle">Actualizar Hospital</h6>
+                <h6 class="card-subtitle">{{hospitalSeleccionado.nombre}}</h6>
 
-                <img src="http://localhost:3000/api/upload/usuario/2d71f22a-0975-42c9-971d-e76dd669c6ea8.png" 
-                                        class="w200"/>
+                <img [src]="hospitalSeleccionado.img | imagen:'hospital'" 
+                                        class="img-thumbnail"/>
 
             </div>
         </div>

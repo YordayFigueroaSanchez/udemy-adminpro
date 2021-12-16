@@ -14,6 +14,7 @@ export class MedicoComponent implements OnInit {
   public medicoForm:  FormGroup;
 
   public hospitales: Hospital[] = [];
+  public hospitalSeleccionado: Hospital;
 
   constructor(private fb: FormBuilder,
               private hospitalService: HospitalService) { }
@@ -26,6 +27,11 @@ export class MedicoComponent implements OnInit {
     });
 
     this.listaHospitales();
+
+    this.medicoForm.get('hospital').valueChanges
+      .subscribe((hospitalId)=>{
+         this.hospitalSeleccionado = this.hospitales.find(h => h._id === hospitalId) 
+      })
   }
 
 
