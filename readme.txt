@@ -184,7 +184,19 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
     ng g guard guards/admin --skipTests
 244 validar el ADMIN_ROLE en nuestro backend
 245 validar si es el mismo usuario o un admin
-    
+248 section 19 optimizadores, lazy load y despliegues
+249 temas puntuales
+    Lazyload
+    Función para renovar el token
+    Guard de renovación de token
+    Leer el token localmente sin comunicación con el servidor
+    Optimizar el tiempo de renovación de token
+    Resolver problema con las imágenes mal ubicadas en la versión de distribución
+    Crear la versión de distribución
+250 lazyload
+    ng g m pages/childRoutes --flat
+    canLoad
+
 
 
 
