@@ -182,6 +182,9 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 242 cargar menu
 243 admin guard
     ng g guard guards/admin --skipTests
+244 validar el ADMIN_ROLE en nuestro backend
+245 validar si es el mismo usuario o un admin
+    
 
 
 
