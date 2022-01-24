@@ -196,6 +196,10 @@ Section 16 mantenimiento de usuarios y modal de carga de imagenes
 250 lazyload
     ng g m pages/childRoutes --flat
     canLoad
+251 desplegar frontend
+252 angular - generar el build de destibucion
+    https://yfsanchez-backend-node.herokuapp.com/
+    ng build --prod
 
 
 
